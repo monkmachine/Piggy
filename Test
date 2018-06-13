@@ -1,0 +1,11 @@
+
+console.log('>> results: ', results );
+               var resp =(results[0]);
+               console.log('>> results: ', resp );
+               var datapack = JSON.stringify(results[0]);
+               var n = datapack.lastIndexOf('@p_userJSON') + 12;
+                var datapack = datapack.substring(n + 1);
+                var datapack = datapack.slice(0, -2);
+                var datapack = JSON.parse(datapack);
+                var datapack = JSON.parse(datapack);
+                res.json(datapack);
